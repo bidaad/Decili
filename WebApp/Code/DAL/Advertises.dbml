@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Parset" Class="AdvertisesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=Parset;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DeciliConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.vAdvertiseKeywords" Member="vAdvertiseKeywords">
+    <Type Name="vAdvertiseKeywords">
+      <Column Name="AdvertiseCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCEntityTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KeywordCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdvertiseCats" Member="AdvertiseCats">
+    <Type Name="AdvertiseCats">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MasterCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vAdvertiseKeyworsFull" Member="vAdvertiseKeyworsFulls">
+    <Type Name="vAdvertiseKeyworsFull" Id="ID1">
+      <Column Name="AdvertiseCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCEntityTypeCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KeywordCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SmallPicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HCAdvertiseStatusCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CatCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vAdvertises" Member="vAdvertises">
+    <Type Name="vAdvertises">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CatName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Price" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FishNo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="[User]" Member="User" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SmallPicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LargePicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="EDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="StateName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCAdvertiseStatusCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShowContactAdvetiserWin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ViewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RateName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CatCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LatX" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LatY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CityCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ProvinceName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LinkActivated" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vActiveFreeAds" Member="vActiveFreeAds">
+    <Type Name="vActiveFreeAds">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCAdvertiseStatusCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCStateCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SmallPicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ShamsiCreateDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CatCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CityCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdsTags" Member="AdsTags">
+    <Type Name="AdsTags">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Advertises" Member="Advertises">
+    <Type Name="Advertises">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CatCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCDurationCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="HCStateCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FishNo" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PayDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ShowContactAdvetiserWin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LinkActivated" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HCAdvertiseStatusCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SmallPicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LargePicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ViewCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CityCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ADUrl" Type="System.String" DbType="NVarChar(450)" CanBeNull="true" />
+      <Column Name="LatX" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LatY" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeciExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AdvertiseUpdateLogs" Member="AdvertiseUpdateLogs">
+    <Type Name="AdvertiseUpdateLogs">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdvertiseCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vActiveAdvertises" Member="vActiveAdvertises">
+    <Type Name="vActiveAdvertises">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCAdvertiseStatusCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCStateCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SmallPicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ShamsiCreateDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CatCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MasterCatCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProvinceCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeciExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.spGetRelatedAdvertises" Method="spGetRelatedAdvertises">
+    <Parameter Name="AdvertiseCode" Parameter="advertiseCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetRelatedAdvertisesResult">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCAdvertiseStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCStateCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SmallPicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetGeneralKeyByCatCode" Method="spGetGeneralKeyByCatCode">
+    <Parameter Name="CatCode" Parameter="catCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetGeneralKeyByCatCodeResult">
+      <Column Name="KeywordCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetRelatedAdsKeywords" Method="spGetRelatedAdsKeywords">
+    <Parameter Name="KeywordCode" Parameter="keywordCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetRelatedAdsKeywordsResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Keyword" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="KeywordCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAdverNews" Method="spGetAdverNews">
+    <Parameter Name="AdvertiseCode" Parameter="advertiseCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetAdverNewsResult">
+      <Column Name="ResouseSiteCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(400) NOT NULL" CanBeNull="false" />
+      <Column Name="NewsDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetNewsAdvertises" Method="spGetNewsAdvertises">
+    <Parameter Name="NewsCode" Parameter="newsCode" Type="System.Int32" DbType="Int" />
+    <ElementType Name="spGetNewsAdvertisesResult">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="ExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Rate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCAdvertiseStatusCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HCStateCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SmallPicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="UserCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ShamsiCreateDate" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CatCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CatName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MasterCatCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.spGetAdKeywordsBySearchPhrase" Method="spGetAdKeywordsBySearchPhrase">
+    <Parameter Name="WhereClause" Parameter="whereClause" Type="System.String" DbType="NVarChar(1000)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+</Database>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Parset" Class="ParsetDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.;Initial Catalog=Parset;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DeciliConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HCMembershipTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MembershipExpDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StateCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCCountryCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCHintQuestionCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HintAnswer" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BirthDay" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AutoLogin" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="HCGenderCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ShowBirthDate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AdminPanelUser" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CountryCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SmallPicFile" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FavBooks" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FavMovies" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ICQNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HCRelationTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DoForFun" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="UpdateTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IInviteMeToJoinGroup" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ISendMessage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IAddMeAsFriend" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IConnectMeAsFan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IConfirmFriendshipReq" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IPostMeGlobalMessage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IPostMePrivateMessage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ISuggestsFriends" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IAcceptFriendISuggested" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ITagsMeOnPhoto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ICommentOnMyPhoto" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IRequestToJoinMyGroup" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IInviteMeAnEvent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IChangeMyEventDate" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ICommentOnMyNote" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ICommentMyLink" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ICommentAfterMeInLink" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ICommentAfterMeOnGeneralMessage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RemindUpload" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AIMNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SkypeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JabberNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MobileNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HCSeekGenderCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCCamStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCUserTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCTallCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCWeightCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCHairColorCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCEyeColorCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCBodyTypeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCRaceCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCMarritalStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCKidNoCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCWantKidCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCProfessionCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCIncomeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCLang1Code" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCLang2Code" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCLang3Code" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCLang4Code" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCEducationCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCPoliticalViewCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCReligionCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCSmokeCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCAlcoholCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HCHumorCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Favorites" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="HobbyComment" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="EduComment" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="RaceInfo" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="EmailPassword" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DockState" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="HCPicStatusCode" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LastLoginTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RegDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdsEmailSent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

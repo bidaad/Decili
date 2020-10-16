@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Links">
+  <DataContextMoniker Name="/LinksDataContext" />
+  <nestedChildShapes>
+    <classShape Id="131fb254-e39f-4957-9abd-a50b853912d3" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/LinksDataContext/Links" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7fa536c8-2e43-4717-be61-676b3a0ff515" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="89fb2e30-2524-4e34-bb63-add3b8943b54" isExpanded="false" absoluteBounds="0.5, 2.875, 2, 0.45">
+      <DataClassMoniker Name="/LinksDataContext/vLinks" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7393154e-e557-480d-acd3-0d2f6e6d7622" absoluteBounds="0.51499999999999968, 3.335, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6f81541-136d-426e-a849-709268bbf94c" absoluteBounds="0.5, 3.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/LinksDataContext/vRandLinks" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a4731e8-00f3-4e7d-babb-83cb0c3cdef9" absoluteBounds="0.51499999999999968, 4.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

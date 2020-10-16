@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Decili.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Decili_biz_setap_ws_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://ws.setap.biz/Service.asmx</Value>
+    </Setting>
+    <Setting Name="Decili_ir_bmi_bmiutility4_MerchantUtility" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://bmiutility4.bmi.ir/MerchantUtility.asmx</Value>
+    </Setting>
+    <Setting Name="Decili_ir_shaparak_pec_EShopService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://pec.shaparak.ir/pecpaymentgateway/eshopservice.asmx</Value>
+    </Setting>
+    <Setting Name="Decilion_ir_bmi_bmiutility4_MerchantUtility" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://bmiutility4.bmi.ir/MerchantUtility.asmx</Value>
+    </Setting>
+    <Setting Name="Decilion_ir_shaparak_pec_EShopService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://pec.shaparak.ir/pecpaymentgateway/eshopservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

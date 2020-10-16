@@ -1,0 +1,258 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="MainRoot.Master.cs" Inherits="Decili.RootSecond" %>
+
+<%@ Register Src="~/UserControls/UCMainMenu.ascx" TagName="MainMenu" TagPrefix="UC" %>
+<%@ Register Src="~/UserControls/Banner.ascx" TagName="UCBanner" TagPrefix="UC" %>
+<%@ Register Src="~/UserControls/UCNewsBox.ascx" TagName="UCNewsBox" TagPrefix="UC" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link id="lnkMainCSS" runat="server" href="~/Styles/Decili.Main.css" media="screen" rel="stylesheet"
+        type="text/css" />
+    <link id="lnkBootstrap" runat="server" rel="stylesheet" href="~/styles/Decili.bootstrap_rtl.css" />
+    <link runat="server" rel="stylesheet" href="~/Styles/font-awesome.min.css" />
+    <link id="lnkPrettyPhoto" runat="server" href="https://static.parset.com/Styles/prettyPhoto.css" type="text/css"
+        rel="stylesheet" media="all" />
+    <link href="https://static.parset.com/Styles/typo.css" rel="stylesheet" />
+    <%--    <link runat="server" href="https://static.parset.com/Styles/jquery-ui-1.8.16.custom_fa.css" rel="stylesheet" />--%>
+    <title>:: دسیلی :: </title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="keywords" runat="server" id="keywords" content="نیازمندی,دسیلی,خرید و فروش کالا,خودرو,تور,املاک,استخدام,آگهی" />
+    <meta name="description" runat="server" id="description" content="نیازمندی,دسیلی,خرید و فروش کالا,خودرو,تور,املاک,استخدام,آگهی" />
+    <meta name="author" content=" «دسیلی»" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
+    <meta id="ogTitle" runat="server" property="og:title" content="" />
+    <meta id="ogType" runat="server" property="og:type" content="product" />
+    <meta id="ogImage" runat="server" property="og:image" content="" />
+    <meta id="ogDescription" runat="server" property="og:description" content="" />
+    <meta property="og:site_name" content="Decili " />
+    <meta id="ogURL" runat="server" property="og:url" content="" />
+    <!--[if lt IE 9]>
+<script src="https://static.parset.com/Scripts/html5.js"></script>
+<script src="https://static.parset.com/Scripts/respond.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://static.parset.com/Styles/ie8_rtl.css" />
+<![endif]-->
+</head>
+<body class="offcanvas-container layout-fullwidth fs12 page-home ">
+    <asp:Literal ID="ltrForm" runat="server"></asp:Literal>
+    <form id="form1" defaultbutton="" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+
+        <section id="page" class="offcanvas-pusher" role="main">
+            <section id="topbar">
+                <header>
+                    <div class="Header1">
+                        <div id="topline">
+                            <div class="container">
+                                <%--<span class="fa fa-phone XLarge"></span><span class="XLarge">٢٦٧٠٣٨٥٢-٠٢١</span>--%>
+                            </div>
+                        </div>
+                        <div class="Top2">
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="col-lg-3 col-sm-6 col-xs-12 col-md-3 text-left">
+                                        <nav>
+                                            <div class="MenuSearch">
+                                                <div class="text-left">
+                                                    <asp:Panel runat="server" ID="pnlLoginLinks">
+                                                        <ul class="LoginTools">
+                                                            <li>
+                                                                <asp:HyperLink runat="server" rel="#overlay" NavigateUrl="~/Users/Login.aspx" ID="login">به حساب کاربری خود وارد شوید
+                                                                    <span class="fa fa-lock fa-20 Gray"></span>
+
+                                                                </asp:HyperLink>
+
+                                                            </li>
+                                                            <li>
+                                                                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Users/Register.aspx">ثبت نام کنید 
+                                                                    <span class="fa fa-user fa-20 Gray"></span>
+                                                                </asp:HyperLink>
+
+                                                            </li>
+
+                                                        </ul>
+
+
+                                                    </asp:Panel>
+                                                    <asp:Panel runat="server" Visible="false" ID="pnlLoggedUserLinks">
+                                                        <ul class="LoginTools">
+                                                            <li>
+                                                                <asp:HyperLink ID="hplProfile" NavigateUrl="~/Users" runat="server">اطلاعات کاربری
+                                                            
+                                                                </asp:HyperLink>
+                                                            </li>
+                                                            <li>
+                                                                <asp:HyperLink ID="hplLogout" NavigateUrl="~/Logout.aspx" runat="server">خروج
+                                                             <span class="fa fa-sign-out fa-20 Gray"></span>
+
+                                                                </asp:HyperLink>
+                                                            </li>
+                                                        </ul>
+                                                    </asp:Panel>
+                                                </div>
+                                                <div class="clearfix">
+                                                </div>
+                                                <div>
+                                                    <ul class="Search">
+                                                        <li>
+                                                            <input id="txtKeyword" name="txtKeyword" type="text" title="جستجو ..." class="Keyword form-control" value="<%=strKeyword %>" placeholder="جستجو ..." />
+                                                        </li>
+                                                        <li>
+                                                            <a class="btnSearch cHand" onclick="SearchKeyword($('#txtKeyword').val())"><i class="fa fa-search fa-2x Maroon"></i></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="clearfix">
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-6 col-md-3 col-xs-12 hidden-xs">
+                                        <div class="MarginTop1">
+
+                                            <div class="AllDates">
+                                                <ul class="DateCaptions">
+
+                                                    <li>
+                                                        <asp:Label ID="lblPersianDate" runat="server" Text=""></asp:Label>
+                                                    </li>
+                                                    <li>
+                                                        <asp:Label ID="lblArabicDate" runat="server" Text=""></asp:Label>
+                                                    </li>
+                                                    <li>
+                                                        <asp:Label ID="lblGerigorianDate" CssClass="MiladiDate" runat="server" Text=""></asp:Label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-6 col-md-4 col-xs-12 hidden-xs">
+                                        <div class="Top5">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                    <input type="button" value="ارسال آگهی" onclick="window.location.href = 'https://ipanel.decili.ir/Users/EditAdvertise.aspx'" class="btn-success btn btn-block" />
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                                                    <input type="button" value="پنل کاربری" onclick="window.location.href = 'https://ipanel.decili.ir/Users/'" class="btn-info btn btn-block" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-sm-6 col-md-2 col-xs-12 hidden-xs hidden-sm">
+                                        <a href="/">
+                                            <div class="cLogo">
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                    <div class="Top3">
+                        <div class="container">
+                            <UC:MainMenu runat="server" ID="MainMenu1" />
+                        </div>
+
+                    </div>
+                </header>
+            </section>
+            <div class="container">
+                <asp:Panel runat="server" ID="pnlHomeWrapper">
+                    <div class="MainPage">
+                        <section>
+                            <asp:ContentPlaceHolder ID="CP1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </section>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                </asp:Panel>
+                <div class="clearfix">
+                </div>
+                <footer>
+                    <div id="Footer">
+                        <div class="FooterTopLinks Padder10 row">
+                            <div class="col-xs-4 col-md-4 text-center">تلفن وبسایت دسیلی:
+                                <asp:HyperLink ID="HyperLink1" CssClass="ContactUs" NavigateUrl="~/ContactUs.aspx"
+                                    runat="server">٢٦٧٠٣٨٥٢-٠٢١</asp:HyperLink>
+                            </div>
+                            <div class="col-xs-4 col-md-4 text-center">
+                                <asp:HyperLink ID="HyperLink2" CssClass="FAQLink" NavigateUrl="~/FAQ.aspx" runat="server">سوالات متداول</asp:HyperLink>
+                            </div>
+                            <div class="col-xs-4 col-md-4 text-center">
+                                <asp:HyperLink ID="HyperLink3" CssClass="ContactEmail" NavigateUrl="#"
+                                    runat="server">info [AT] Decili.ir</asp:HyperLink>
+                            </div>
+                        </div>
+                        <div class="Right RTL FooterMsg Padder10">
+                        </div>
+                        <div class="clearfix">
+                        </div>
+                        <div class="Board Padder10">
+                        </div>
+                        <div class="Bot">
+                            <nav class="footer-nav Padder10">
+                                <ul>
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="~/ContactUs.aspx" runat="server">تماس با ما</asp:HyperLink>
+                                    </li>
+                                    <li class="sep"><span class="line"></span></li>
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="~/TermsConditions.aspx" runat="server">شرایط استفاده</asp:HyperLink>
+                                    </li>
+                                    <li class="sep"><span class="line"></span></li>
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="~/Rules.aspx" runat="server">قوانین</asp:HyperLink>
+                                    </li>
+                                    <li class="sep"><span class="line"></span></li>
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="https://ipanel.decili.ir/Users/Login.aspx" runat="server">ورود</asp:HyperLink>
+                                    </li>
+                                    <li class="sep"><span class="line"></span></li>
+                                    <li>
+                                        <asp:HyperLink NavigateUrl="https://ipanel.decili.ir/Users/Register.aspx" runat="server">ثبت نام</asp:HyperLink>
+                                    </li>
+                                    <li></li>
+                                </ul>
+                            </nav>
+                            <div class="clearfix">
+                            </div>
+                            <div class="en Padder10">
+                                فعالیت‌های این سایت تابع قوانین و مقررات جمهوری اسلامی ایران است
+                            
+                            <div class="CopyRight">
+                                Copyright &copy; 2014 - 2016 <a href="https://www.Decili.ir">Decili.ir</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+
+    </form>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-4554891-16', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>
